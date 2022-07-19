@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <name>region1</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <identifier>compositionBasics</identifier>
+<componentName>compositionBasics</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>region2</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <identifier>compositionIteration</identifier>
+<componentName>compositionIteration</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>region3</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <identifier>compositionContactSearch</identifier>
+<componentName>compositionContactSearch</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>numberValue</name>
+                    <value>10</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>picklistValue</name>
+                    <value>Option One</value>
+                </componentInstanceProperties>
+                <identifier>compositionWithAppBuilder</identifier>
+<componentName>compositionWithAppBuilder</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>region4</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Composition</masterLabel>
+    <template>
+        <name>flexipage:appHomeTemplateHeaderThreeColumns</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

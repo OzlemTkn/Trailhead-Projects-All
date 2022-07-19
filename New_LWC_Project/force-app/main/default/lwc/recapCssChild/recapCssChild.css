@@ -1,0 +1,6 @@
+p{
+    color:blue;
+}
+h3{
+    color: var(--h3color,black);
+}

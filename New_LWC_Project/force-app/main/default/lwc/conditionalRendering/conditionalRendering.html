@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+  
+        <lightning-input
+            type="checkbox" 
+            label="Flag"
+            onchange={handeFlag}
+        > </lightning-input>
+        <template if:true={flag}>
+            <h1>Flag is up</h1>
+            |> <br>
+            |<br>
+            |
+        </template>
+        <template if:false={flag}>
+            <h2>Flag is down</h2>
+            |<br>
+            |<br>
+            |>
+        </template>
+    </lightning-card>
+</template>

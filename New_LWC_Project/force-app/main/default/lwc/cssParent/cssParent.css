@@ -1,0 +1,7 @@
+p{
+    color:red;
+    font-weight: bold;
+}
+c-css-child{
+   --highlight-color:yellow
+}

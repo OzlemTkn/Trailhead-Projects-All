@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Bubbling Event">
+        <form onclick={handleFormClick}>
+            I am form
+            <div onclick={handleDivClick}>
+                I am division
+                <p onclick={handleParClick}>
+                    I am paragraph
+                </p>
+            </div>
+        </form>
+    </lightning-card>
+</template>

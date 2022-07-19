@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Car App">
+        <lightning-input 
+        type="text"
+        label="car brand"
+        placeholder="enter the brand.."
+        onblur={handleBrand}      
+        ></lightning-input>
+        <lightning-input 
+        type="text"
+        label="engine Model"
+        placeholder="enter engine model"
+        onblur={handleModel}      
+        ></lightning-input>
+        <lightning-input 
+        type="text"
+        label="engine volume"
+        placeholder="enter engine volume..."
+        onblur={handleVolume}      
+        ></lightning-input>
+        <lightning-input 
+        type="text"
+        label="engine feature"
+        placeholder="enter engine feature..."
+        onblur={handleEngineFeature}      
+        ></lightning-input>
+    </lightning-card>
+<br>
+    <lightning-card title="Car Info">  
+        <p>Car Brand: <strong>{carBrand}</strong></p>
+        <c-car-engine engine-model={carEngineModel} engine-volume={carEngineVolume} engine-features={carEngineFeature}> </c-car-engine>
+        <!-- to assign javascript property from parent componenet
+        we create attribute in html element and we assign the value -->
+    </lightning-card>
+</template>

@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Data Binding">
+        Hello {name}
+    </lightning-card>
+    <br>
+    <lightning-card title="Handling User Input">
+        <lightning-input 
+            label="Name"
+            placeholder={info}
+            onchange={handleChange}>
+        </lightning-input>
+        <br>
+        <div><strong>Your Name:</strong> {fullName}</div>
+    </lightning-card>
+    <br>
+    <lightning-card title="Modifing User Input">
+        <lightning-input 
+            label="First Name:"
+            onchange={handleInput1}>
+        </lightning-input>
+        <lightning-input 
+            label="Last Name:"
+            onchange={handleInput2}>
+        </lightning-input>
+        <br>
+        <div><strong>Uppercased Full Name</strong> {uppercasedFullName}</div>
+    </lightning-card>
+</template>

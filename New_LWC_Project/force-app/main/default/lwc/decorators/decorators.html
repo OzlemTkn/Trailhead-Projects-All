@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Decorators">
+        <lightning-input
+            type="text"
+            label="Family Name"
+            placeholder="enter family name..."
+            onchange={handleFamilyName}
+        ></lightning-input>
+        <lightning-input
+            type="text"
+            label="Family Member Name"
+            placeholder="enter family member name..."
+            onchange={handleFamilyMemberName}
+        ></lightning-input>
+        <lightning-input
+            type="number"
+            label="Family Member Age"
+            placeholder="enter family member age..."
+            onchange={handleFamilyMemberAge}
+        ></lightning-input>
+        <lightning-button 
+            variant="Brand"
+            label="Add Member"
+            onclick={handleClick}
+        ></lightning-button>
+        <lightning-button 
+        variant="Destructive"
+        label="Clear Members"
+        onclick={handleClear}
+    ></lightning-button>
+        <br>
+        <p style="font-size: 120%">Family Name: <strong>{familyName}</strong></p>
+        <!-- <p>Name: {familyMember.name}     Age: {familyMember.age}</p> -->
+        <ul>
+            <template for:each={familyMemberList} for:item="member">
+                <li key={member.id}> {member.name}  {member.age}</li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>

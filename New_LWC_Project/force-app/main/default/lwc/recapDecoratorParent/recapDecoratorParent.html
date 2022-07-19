@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Decorator">
+<lightning-input 
+type="text"
+label="musteri ismi"
+onchange={handleName}
+   ></lightning-input> 
+   <br>
+   <lightning-input 
+type="number"
+label="yas"
+onchange={handleAge}
+   ></lightning-input> 
+   <lightning-button
+   variant="success"
+   label="musteri ekle"
+   onclick={addCustomer}
+   ></lightning-button>
+   <p><strong>Musteri Listesi:</strong></p>
+<ul>
+    <template for:each={musteriler} for:item="musteri">
+        <li key={musteri.id}>{musteri.name} / {musteri.age}</li>
+    </template>
+
+</ul>
+</lightning-card>
+</template>

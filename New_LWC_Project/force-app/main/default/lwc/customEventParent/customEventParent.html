@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Parent Comp(Custom Event)">
+        <p><strong>INFO:</strong>{information}</p>
+        <h1><strong><u>Customer Information</u></strong></h1>
+        <p><strong>Customer Name:</strong>{customerDetail.name}</p>
+        <p><strong>Customer SSN:</strong>{customerDetail.ssn}</p>
+        <p><strong>Customer Email:</strong>{customerDetail.email}</p>
+    </lightning-card>
+    <c-custom-event-child onfire={handleCustomEvent} oncomplete={handleCustomer}></c-custom-event-child>
+</template>

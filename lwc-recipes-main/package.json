@@ -1,0 +1,56 @@
+{
+    "name": "lwc-recipes",
+    "private": true,
+    "version": "0.1.0",
+    "description": "Lightning Web Components Recipes",
+    "scripts": {
+        "lint": "eslint **/{lwc,aura}/**/*.js",
+        "test": "npm run test:unit",
+        "test:unit": "sfdx-lwc-jest --skipApiVersionCheck",
+        "test:unit:watch": "sfdx-lwc-jest --watch --skipApiVersionCheck",
+        "test:unit:debug": "sfdx-lwc-jest --debug --skipApiVersionCheck",
+        "test:unit:coverage": "sfdx-lwc-jest --coverage --skipApiVersionCheck",
+        "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
+        "prettier:verify": "prettier --check \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
+        "postinstall": "husky install",
+        "precommit": "lint-staged"
+    },
+    "lint-staged": {
+        "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
+            "prettier --write"
+        ],
+        "**/{aura,lwc}/**/*.js": [
+            "eslint"
+        ],
+        "**/lwc/**": [
+            "sfdx-lwc-jest --skipApiVersionCheck -- --bail --findRelatedTests"
+        ]
+    },
+    "author": "salesforce.com",
+    "license": "CC0-1.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/trailheadapps/lwc-recipes"
+    },
+    "devDependencies": {
+        "@lwc/eslint-plugin-lwc": "^1.1.2",
+        "@prettier/plugin-xml": "^2.0.1",
+        "@sa11y/jest": "^3.1.0",
+        "@salesforce/eslint-config-lwc": "^3.2.4",
+        "@salesforce/eslint-plugin-aura": "^2.1.0",
+        "@salesforce/eslint-plugin-lightning": "^1.0.0",
+        "@salesforce/sfdx-lwc-jest": "^1.1.0",
+        "eslint": "^8.12.0",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-jest": "^26.1.3",
+        "husky": "^7.0.4",
+        "jest-canvas-mock": "^2.3.1",
+        "lint-staged": "^12.3.7",
+        "prettier": "^2.6.1",
+        "prettier-plugin-apex": "^1.10.0"
+    },
+    "volta": {
+        "node": "14.17.3",
+        "npm": "6.14.13"
+    }
+}

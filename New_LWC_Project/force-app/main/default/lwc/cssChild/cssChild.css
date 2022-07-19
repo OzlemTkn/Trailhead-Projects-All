@@ -1,0 +1,9 @@
+p{
+    color: blue;
+}
+.important{
+    background-color: var(--highlight-color,rgb(70,66,66));
+    display: inline-block;
+  
+    font-style: italic;
+}

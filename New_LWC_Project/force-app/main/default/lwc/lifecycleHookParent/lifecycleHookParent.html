@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="Parent Comp(Lifecycle Hook)">
+        <p class="abc">inside the parent component</p>
+        <p><strong>Contact list fetched by connectedCallback</strong></p>
+        <ul>
+            <template for:each={contacts} for:item="contact">
+                <li key={contact.id}> {contact.Name}</li>
+            </template>
+        </ul>
+        <lightning-input
+            type="text"
+            onchange={handleChange}
+        ></lightning-input>
+        {data}
+        -----------------
+        <lightning-button
+            variant={variant}
+            label={label}
+            onclick={handleClick}
+        ></lightning-button>
+    </lightning-card>
+    <template if:true={isChildVisible}>
+        <c-lifecycle-hook-child></c-lifecycle-hook-child>
+        <div style="background: white;padding: 20px;border-radius: 6px;">
+            <div style="font-size: 20px;text-align:center;">{timeVal}</div>
+    
+            <template if:true={showStartBtn}>
+                <lightning-button label="Start" onclick={start} style="margin-left: 145px;"></lightning-button>
+            </template>
+            <template if:false={showStartBtn}>
+                <lightning-button label="Stop" onclick={stop} style="margin-left: 145px;"></lightning-button>
+            </template>
+            
+            <lightning-button label="Reset" onclick={reset} style="margin-left: 10px;"></lightning-button>
+        </div>
+    </template>
+</template>

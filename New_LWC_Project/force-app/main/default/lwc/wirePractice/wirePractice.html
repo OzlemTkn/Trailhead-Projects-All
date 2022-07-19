@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Account Search Component">
+        <lightning-input
+            type="search"
+            label="Account Name"
+            placeholder="search Account by entering Name..."
+            onchange={handleSearch}
+        ></lightning-input>
+        <br>
+        <ul>
+            <template for:each={accountList.data} for:item="account">
+                <li key={account.id}>{account.Name}</li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>

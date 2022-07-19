@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title ="Data Binding">
+        Hello {name}
+    </lightning-card>
+    <br>
+    <lightning-card title="Handling User Input">
+        <lightning-input
+        label="Name"
+        placeholder={info}
+        onchange={handlerChange}>
+    </lightning-input>
+    <br>
+    <div><strong>Your Name: </strong> {fullName} </div>
+    </lightning-card>
+</template>

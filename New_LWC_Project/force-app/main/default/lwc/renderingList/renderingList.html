@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="List Rendering">
+        <ul>
+            <template for:each={customers} for:item="customer">
+                <li key={customer.id}>
+                    <p> <strong>Customer {customer.id}</strong> </p>
+                    <p><strong>Name:</strong>  {customer.Name}</p>
+                    <p><strong>Role:</strong>  {customer.Role}</p>
+                    <br>
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+    <br>
+    <lightning-card title="List Rendering with iterator">
+        <ul>           
+            <template iterator:it={customers}>
+                <li key={it.value.id}>
+                    <p if:true={it.first} class="first">-----------------------</p>
+                    <p> <strong>Customer {it.value.id}</strong> </p>
+                    <p><strong>Name:</strong>  {it.value.Name}</p>
+                    <p><strong>Role:</strong>  {it.value.Role}</p>
+                    <p if:true={it.last} class="last">-------------------------</p>
+                    <br>
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>

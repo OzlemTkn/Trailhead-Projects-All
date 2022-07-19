@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Child Comp(Custom Event)">
+        <lightning-button
+            variant="Success"
+            label="Fire Custom Event"
+            onclick={handleClick}   
+        ></lightning-button>
+        
+        <lightning-input
+            type="text"
+            label="Information"
+            placeholder="please enter information to pass"
+            onblur={handleInfoInput}
+        ></lightning-input>
+        <h1><strong>Customer Information Form</strong></h1>
+        <lightning-input
+            type="text"
+            label="Name"
+            placeholder="please enter customer name..."
+            onblur={handleName}
+        ></lightning-input>
+        <lightning-input
+            type="number"
+            label="SSN"
+            placeholder="please enter Customer SSN..."
+            onblur={handleSSN}
+        ></lightning-input>
+        <lightning-input
+            type="text"
+            label="Email"
+            placeholder="please enter Customer Email..."
+            onblur={handleEmail}
+        ></lightning-input>
+    </lightning-card>
+</template>
